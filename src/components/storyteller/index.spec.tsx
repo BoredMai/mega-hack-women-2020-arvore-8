@@ -1,13 +1,15 @@
 import { shallow, ShallowWrapper } from 'enzyme';
+
+import { rootPage } from 'pages';
 import React from 'react';
 
-import App from '.';
+import Storyteller from '.';
 
-let wrapper: ShallowWrapper;
+describe('Storyteller', () => {
+  let wrapper: ShallowWrapper;
 
-describe('<App>', () => {
   beforeEach(() => {
-    wrapper = shallow(<App />) as ShallowWrapper;
+    wrapper = shallow(<Storyteller {...rootPage} />) as ShallowWrapper;
   });
 
   it('renders properly', () => {

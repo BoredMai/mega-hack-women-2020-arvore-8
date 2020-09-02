@@ -1,9 +1,13 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 
-class App extends Component {
-  render(): JSX.Element {
-    return <h1>This is the main App component.</h1>;
-  }
-}
+import Storyteller from 'components/storyteller';
+import { rootPage } from '../../pages';
+import { Page } from 'types';
+
+const App = (): JSX.Element => {
+  const [page] = useState<Page>(rootPage);
+
+  return <Storyteller {...page} />;
+};
 
 export default App;

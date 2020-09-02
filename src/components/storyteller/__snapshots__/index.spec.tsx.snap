@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyteller renders properly 1`] = `
+<div>
+  <p>
+    Era uma vez um reino misterioso e sagrado onde habitavam seres mágicos, um povoado e sua princesa! Como ela era amada pelo seu povo! Sua inteligência, coragem e lealdade para com seu povo era admirável.
+  Seu nome era...
+  </p>
+</div>
+`;
