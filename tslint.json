@@ -1,0 +1,8 @@
+{
+  "extends": ["tslint:latest"],
+  "rules": {
+    "member-access": [true, "no-public"],
+    "no-submodule-imports": false,
+    "quotemark": [true, "single", "jsx-double"]
+  }
+}
