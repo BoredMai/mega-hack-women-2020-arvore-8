@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header renders properly 1`] = `
+<div
+  className="header"
+>
+  <div>
+    Árvore
+  </div>
+  <div>
+    <span>
+      X
+    </span>
+    <span>
+      Maianne Ribeiro
+    </span>
+  </div>
+</div>
+`;

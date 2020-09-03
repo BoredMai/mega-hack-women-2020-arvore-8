@@ -12,12 +12,7 @@ module.exports = {
     'plugin:@typescript-eslint/recommended-requiring-type-checking',
     'plugin:react/recommended',
   ],
-  settings: {
-    react: {
-      createClass: 'createReactClass',
-      pragma: 'React',
-      version: 'detect',
-      flowVersion: '0.53',
-    },
+  rules: {
+    '@typescript-eslint/no-unsafe-assignment': 0,
   },
 };

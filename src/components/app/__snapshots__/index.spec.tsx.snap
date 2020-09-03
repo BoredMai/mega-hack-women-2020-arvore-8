@@ -1,8 +1,27 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<App> renders properly 1`] = `
-<Storyteller
-  content="Era uma vez um reino misterioso e sagrado onde habitavam seres mágicos, um povoado e sua princesa! Como ela era amada pelo seu povo! Sua inteligência, coragem e lealdade para com seu povo era admirável.
-  Seu nome era..."
-/>
+<div
+  className="main"
+>
+  <Header />
+  <Storyteller
+    content="Era uma vez um reino misterioso e sagrado onde habitavam seres mágicos, um povoado e sua princesa! Como ela era amada pelo seu povo! Sua inteligência, coragem e lealdade para com seu povo era admirável.
+Seu nome era..."
+    next={
+      Array [
+        Object {
+          "content": "A princesa {nome} era muito conhecida por ser uma exímia...",
+        },
+      ]
+    }
+    prompt={
+      Object {
+        "placeholder": "Nome da princesa",
+        "type": "text",
+        "value": "characterName",
+      }
+    }
+  />
+</div>
 `;

@@ -18,6 +18,7 @@ module.exports = {
   resolve: {
     alias: {
       components: path.resolve(__dirname, 'src/components/'),
+      pages: path.resolve(__dirname, 'src/pages/'),
     },
     extensions: ['.js', '.jsx', '.json', '.ts', '.tsx'],
   },
@@ -32,8 +33,9 @@ module.exports = {
           {
             loader: 'css-loader',
             options: {
-              localsConvention: 'camelCase',
+              importLoaders: 1,
               modules: {
+                exportLocalsConvention: 'camelCase',
                 localIdentName: '[local]__[hash:base64:5]',
               },
             },
