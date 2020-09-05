@@ -4,18 +4,3 @@
   font-family: 'Roboto', sans-serif;
   height: 100vh;
 }
-
-:local(.main button) {
-  border: none;
-  border-radius: 6px;
-  background-color: #8553f4;
-  color: #ffffff;
-  cursor: pointer;
-  font-size: 2.4rem;
-  font-weight: bold;
-  padding: 1rem 3rem;
-}
-
-:local(.main button:hover) {
-  background-color: #9362ff;
-}

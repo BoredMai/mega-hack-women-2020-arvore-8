@@ -4,21 +4,25 @@ exports[`Storyteller renders properly 1`] = `
 <div
   className="storyteller"
 >
-  <p
-    className="storyContent"
+  <div
+    className="content-wrapper"
   >
-    Era uma vez um reino misterioso e sagrado onde habitavam seres mágicos, um povoado e sua princesa! Como ela era amada pelo seu povo! Sua inteligência, coragem e lealdade para com seu povo era admirável.
+    <p
+      className="storyContent"
+    >
+      Era uma vez um reino misterioso e sagrado onde habitavam seres mágicos, um povoado e sua princesa! Como ela era amada pelo seu povo! Sua inteligência, coragem e lealdade para com seu povo era admirável.
 Seu nome era...
-  </p>
-  <Prompt
-    onPromptUpdate={[Function]}
-    prompt={
-      Object {
-        "key": "characterName",
-        "placeholder": "Nome da princesa",
-        "type": "text",
+    </p>
+    <Prompt
+      onPromptUpdate={[Function]}
+      prompt={
+        Object {
+          "key": "characterName",
+          "placeholder": "Nome da princesa",
+          "type": "text",
+        }
       }
-    }
-  />
+    />
+  </div>
 </div>
 `;
