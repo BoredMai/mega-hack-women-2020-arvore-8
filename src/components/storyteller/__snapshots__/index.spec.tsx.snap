@@ -11,7 +11,7 @@ exports[`Storyteller renders properly 1`] = `
 Seu nome era...
   </p>
   <Prompt
-    onPromptUpdate={[MockFunction onPromptUpdate]}
+    onPromptUpdate={[Function]}
     prompt={
       Object {
         "key": "characterName",

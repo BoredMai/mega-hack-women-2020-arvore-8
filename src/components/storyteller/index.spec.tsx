@@ -6,17 +6,30 @@ import React from 'react';
 import Storyteller from '.';
 
 describe('Storyteller', () => {
-  const props = {
-    onPromptUpdate: jest.fn().mockName('onPromptUpdate'),
-    page: rootPage,
-  };
+  const setPageMock = jest.fn().mockName('setPage');
+  const setStoryPromptMock = jest.fn().mockName('setStoryPrompt');
+  const useStateSpy = jest.spyOn(React, 'useState');
+
   let wrapper: ShallowWrapper;
 
   beforeEach(() => {
-    wrapper = shallow(<Storyteller {...props} />) as ShallowWrapper;
+    jest.clearAllMocks();
+    useStateSpy
+      .mockImplementationOnce(() => [rootPage, setPageMock])
+      .mockImplementationOnce(() => [{}, setStoryPromptMock]);
+    wrapper = shallow(<Storyteller />) as ShallowWrapper;
   });
 
   it('renders properly', () => {
     expect(wrapper.getElement()).toMatchSnapshot();
+  });
+
+  it('updates state correctly on promptUpdate', () => {
+    const promptKey = 'promptKey';
+    const promptValue = 'promptValue';
+    wrapper.find('Prompt').simulate('promptUpdate', promptKey, promptValue);
+
+    expect(setStoryPromptMock).toHaveBeenCalledWith({ promptKey: promptValue });
+    expect(setPageMock).toHaveBeenCalledWith(rootPage.next[0]);
   });
 });
