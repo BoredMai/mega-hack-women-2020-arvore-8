@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Prompt> renders properly 1`] = `
+<div
+  className="prompt"
+>
+  <input
+    onChange={[Function]}
+    type="input"
+  />
+  <button
+    onClick={[Function]}
+  >
+    OK
+  </button>
+</div>
+`;

@@ -8,8 +8,8 @@ export const rootPage: Page = {
   content: `Era uma vez um reino misterioso e sagrado onde habitavam seres mágicos, um povoado e sua princesa! Como ela era amada pelo seu povo! Sua inteligência, coragem e lealdade para com seu povo era admirável.\nSeu nome era...`,
   next: [skillPage],
   prompt: {
-    placeholder: 'Nome da princesa',
+    key: 'characterName',
     type: 'text',
-    value: 'characterName',
+    placeholder: 'Nome da princesa',
   },
 };

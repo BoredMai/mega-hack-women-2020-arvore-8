@@ -14,10 +14,3 @@
   max-width: 60rem;
   padding: 2rem;
 }
-
-:local(.storyteller input) {
-  border: none;
-  border-radius: 0.5rem;
-  padding: 1rem;
-  width: 30rem;
-}

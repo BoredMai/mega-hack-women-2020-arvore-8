@@ -15,4 +15,12 @@ module.exports = {
   rules: {
     '@typescript-eslint/no-unsafe-assignment': 0,
   },
+  settings: {
+    react: {
+      createClass: 'createReactClass',
+      pragma: 'React',
+      version: 'detect',
+      flowVersion: '0.53',
+    },
+  },
 };
