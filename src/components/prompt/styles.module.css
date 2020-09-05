@@ -1,6 +1,23 @@
+:local(.prompt) {
+  display: flex;
+  position: relative;
+}
+
 :local(.prompt input) {
-  border: none;
+  border: 1px solid #ededed;
   border-radius: 0.5rem;
-  padding: 1rem;
+  font-family: inherit;
+  margin-right: 2rem;
+  padding: 0.5rem 1rem;
   width: 30rem;
+}
+
+:local(.prompt label) {
+  color: #45cbce;
+  font-weight: 500;
+  font-size: 1rem;
+  position: absolute;
+  top: 0.2rem;
+  left: 1.1rem;
+  text-transform: uppercase;
 }

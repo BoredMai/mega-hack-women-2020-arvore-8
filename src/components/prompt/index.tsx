@@ -17,9 +17,10 @@ const Prompt = (props: Props): JSX.Element => {
 
   return (
     <div className={styles.prompt}>
+      <label htmlFor='promptInput'>{prompt.placeholder}</label>
       <input
+        id='promptInput'
         onChange={(e) => setValue(e.target.value)}
-        placeholder={prompt.placeholder}
         type={prompt.type}
       />
       <button onClick={() => onPromptUpdate(prompt.key, value)}>OK</button>
