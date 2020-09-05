@@ -4,9 +4,7 @@ exports[`Storyteller renders properly 1`] = `
 <div
   className="storyteller"
 >
-  <div
-    className="content-wrapper"
-  >
+  <ContentWrapper>
     <p
       className="storyContent"
     >
@@ -23,6 +21,6 @@ Seu nome era...
         }
       }
     />
-  </div>
+  </ContentWrapper>
 </div>
 `;

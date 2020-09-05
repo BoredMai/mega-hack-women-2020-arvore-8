@@ -1,9 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<LandingPage> renders properly 1`] = `
-<div
-  className="content-wrapper"
->
+<ContentWrapper>
   <h1>
     Colha uma História
   </h1>
@@ -17,5 +15,5 @@ exports[`<LandingPage> renders properly 1`] = `
       Vamos lá
     </Link>
   </button>
-</div>
+</ContentWrapper>
 `;

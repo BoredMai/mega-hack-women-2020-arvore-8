@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 
+import ContentWrapper from 'components/content-wrapper';
 import Prompt from 'components/prompt';
 import { rootPage } from 'pages';
 import { Page, StoredPrompts } from 'types';
@@ -24,10 +25,10 @@ const Storyteller = (): JSX.Element => {
 
   return (
     <div className={styles.storyteller}>
-      <div className='content-wrapper'>
+      <ContentWrapper>
         <p className={styles.storyContent}>{content}</p>
         <Prompt onPromptUpdate={onPromptUpdate} prompt={prompt} />
-      </div>
+      </ContentWrapper>
     </div>
   );
 };
