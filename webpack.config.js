@@ -47,7 +47,7 @@ module.exports = {
         test: /\.(png|jp(e*)g|svg)$/,
         use: [
           {
-            loader: 'url-loader',
+            loader: 'file-loader',
             options: {
               limit: 8000,
               name: 'images/[name]__[hash].[ext]',
@@ -56,6 +56,9 @@ module.exports = {
         ],
       },
     ],
+  },
+  devServer: {
+    historyApiFallback: true,
   },
   plugins: [HtmlWebpackPluginConfig],
 };

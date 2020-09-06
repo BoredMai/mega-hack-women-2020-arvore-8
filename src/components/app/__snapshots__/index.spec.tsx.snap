@@ -8,9 +8,14 @@ exports[`<App> renders properly 1`] = `
     <Header />
     <Switch>
       <Route
-        path="/biblioteca"
+        path="/biblioteca/:story"
       >
         <Storyteller />
+      </Route>
+      <Route
+        path="/biblioteca"
+      >
+        <Library />
       </Route>
       <Route
         path="/"

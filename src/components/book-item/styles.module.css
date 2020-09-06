@@ -1,0 +1,41 @@
+:local(.book) {
+  align-items: center;
+  border-radius: 3rem;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  font-size: 1.8rem;
+  padding: 1.5rem;
+}
+
+:local(.book:hover) {
+  background-color: #9362ff44;
+}
+
+:local(.book label) {
+  margin-top: 1.5rem;
+}
+
+:local(.book img) {
+  opacity: 0.8;
+}
+
+:local(.book-selected) {
+  composes: book;
+  background-color: #9362ff66;
+}
+
+:local(.book-selected img) {
+  opacity: 1;
+}
+
+:local(.book-disabled) {
+  composes: book;
+  cursor: auto;
+  pointer-events: none;
+}
+
+:local(.book-disabled img) {
+  filter: grayscale(100%);
+  --webkit-filter: grayscale(100%);
+}
