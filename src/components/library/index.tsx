@@ -8,6 +8,7 @@ import LoadingSpinner from 'components/loading-spinner';
 import { Book } from 'types';
 
 import styles from './styles.module.css';
+import backgrounds from 'styles/backgrounds.module.css';
 
 const Library = (): JSX.Element => {
   const history = useHistory();
@@ -32,7 +33,11 @@ const Library = (): JSX.Element => {
       ]);
     }, 2000);
 
-    return <LoadingSpinner />;
+    return (
+      <div className={backgrounds.grass}>
+        <LoadingSpinner />
+      </div>
+    );
   }
 
   const navigateToStory = () => {
@@ -40,24 +45,28 @@ const Library = (): JSX.Element => {
   };
 
   return (
-    <ContentWrapper>
-      <h1>Colha uma História</h1>
-      <p>Muito bem, Clarice: Você está a um passo de ser uma grande autora!</p>
-      <p>Agora, vamos escolher o personagem para a sua história?</p>
-      <div className={styles.bookshelf}>
-        {books.map((book) => (
-          <BookItem
-            key={book.label}
-            book={book}
-            isSelected={book === selection}
-            onSelectBook={selectBook}
-          />
-        ))}
-      </div>
-      {selection && (
-        <button onClick={navigateToStory}>Criar meu personagem</button>
-      )}
-    </ContentWrapper>
+    <div className={backgrounds.grass}>
+      <ContentWrapper>
+        <h1>Colha uma História</h1>
+        <p>
+          Muito bem, Clarice: Você está a um passo de ser uma grande autora!
+        </p>
+        <p>Agora, vamos escolher o personagem para a sua história?</p>
+        <div className={styles.bookshelf}>
+          {books.map((book) => (
+            <BookItem
+              key={book.label}
+              book={book}
+              isSelected={book === selection}
+              onSelectBook={selectBook}
+            />
+          ))}
+        </div>
+        {selection && (
+          <button onClick={navigateToStory}>Criar meu personagem</button>
+        )}
+      </ContentWrapper>
+    </div>
   );
 };
 

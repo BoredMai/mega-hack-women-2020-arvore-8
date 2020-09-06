@@ -1,56 +1,66 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Library> after fetching data renders properly 1`] = `
-<ContentWrapper>
-  <h1>
-    Colha uma História
-  </h1>
-  <p>
-    Muito bem, Clarice: Você está a um passo de ser uma grande autora!
-  </p>
-  <p>
-    Agora, vamos escolher o personagem para a sua história?
-  </p>
-  <div
-    className="bookshelf"
-  >
-    <BookItem
-      book={
-        Object {
-          "icon": "princesa",
-          "label": "Princesa",
-          "url": "princesa",
+<div
+  className="grass"
+>
+  <ContentWrapper>
+    <h1>
+      Colha uma História
+    </h1>
+    <p>
+      Muito bem, Clarice: Você está a um passo de ser uma grande autora!
+    </p>
+    <p>
+      Agora, vamos escolher o personagem para a sua história?
+    </p>
+    <div
+      className="bookshelf"
+    >
+      <BookItem
+        book={
+          Object {
+            "icon": "princesa",
+            "label": "Princesa",
+            "url": "princesa",
+          }
         }
-      }
-      isSelected={false}
-      onSelectBook={[Function]}
-    />
-    <BookItem
-      book={
-        Object {
-          "disabled": true,
-          "icon": "mago",
-          "label": "Mago",
-          "url": "mago",
+        isSelected={false}
+        onSelectBook={[Function]}
+      />
+      <BookItem
+        book={
+          Object {
+            "disabled": true,
+            "icon": "mago",
+            "label": "Mago",
+            "url": "mago",
+          }
         }
-      }
-      isSelected={false}
-      onSelectBook={[Function]}
-    />
-    <BookItem
-      book={
-        Object {
-          "disabled": true,
-          "icon": "unicornio",
-          "label": "Unicórnio",
-          "url": "unicornio",
+        isSelected={false}
+        onSelectBook={[Function]}
+      />
+      <BookItem
+        book={
+          Object {
+            "disabled": true,
+            "icon": "unicornio",
+            "label": "Unicórnio",
+            "url": "unicornio",
+          }
         }
-      }
-      isSelected={false}
-      onSelectBook={[Function]}
-    />
-  </div>
-</ContentWrapper>
+        isSelected={false}
+        onSelectBook={[Function]}
+      />
+    </div>
+  </ContentWrapper>
+</div>
 `;
 
-exports[`<Library> renders loading state 1`] = `<LoadingSpinner />`;
+exports[`<Library> renders loading state 1`] = `
+<div
+  className="grass"
+>
+  <LoadingSpinner />
+</div>
+`;
