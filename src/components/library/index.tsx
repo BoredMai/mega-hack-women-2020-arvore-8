@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import { useHistory, useRouteMatch } from 'react-router-dom';
 
-import BookItem from 'components/book-item';
+import ChoiceItem from 'components/choice-item';
 import ContentWrapper from 'components/content-wrapper';
 import LoadingSpinner from 'components/loading-spinner';
 
-import { Book } from 'types';
+import { UserChoice } from 'types';
 
 import styles from './styles.module.css';
 import backgrounds from 'styles/backgrounds.module.css';
@@ -13,8 +13,8 @@ import backgrounds from 'styles/backgrounds.module.css';
 const Library = (): JSX.Element => {
   const history = useHistory();
   const { path } = useRouteMatch();
-  const [books, setBooks] = useState<Array<Book>>(null);
-  const [selection, selectBook] = useState<Book>(null);
+  const [books, setBooks] = useState<Array<UserChoice>>(null);
+  const [selection, selectBook] = useState<UserChoice>(null);
 
   if (!books) {
     /**
@@ -22,11 +22,16 @@ const Library = (): JSX.Element => {
      */
     setTimeout(() => {
       setBooks([
-        { icon: 'princesa', label: 'Princesa', url: 'princesa' },
-        { disabled: true, icon: 'mago', label: 'Mago', url: 'mago' },
+        { icon: 'library/princesa.png', label: 'Princesa', url: 'princesa' },
         {
           disabled: true,
-          icon: 'unicornio',
+          icon: 'library/mago.png',
+          label: 'Mago',
+          url: 'mago',
+        },
+        {
+          disabled: true,
+          icon: 'library/unicornio.png',
           label: 'Unicórnio',
           url: 'unicornio',
         },
@@ -54,11 +59,11 @@ const Library = (): JSX.Element => {
         <p>Agora, vamos escolher o personagem para a sua história?</p>
         <div className={styles.bookshelf}>
           {books.map((book) => (
-            <BookItem
+            <ChoiceItem
               key={book.label}
-              book={book}
+              choice={book}
               isSelected={book === selection}
-              onSelectBook={selectBook}
+              onSelect={selectBook}
             />
           ))}
         </div>

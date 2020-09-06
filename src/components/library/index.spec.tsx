@@ -35,13 +35,13 @@ describe('<Library>', () => {
     });
 
     it('selects book on item click', () => {
-      wrapper.find('BookItem').at(0).simulate('selectBook', book);
+      wrapper.find('ChoiceItem').at(0).simulate('select', book);
 
       expect(wrapper.find('button')).toHaveLength(1);
     });
 
     it('navigates to selected book on button click', () => {
-      wrapper.find('BookItem').at(0).simulate('selectBook', book);
+      wrapper.find('ChoiceItem').at(0).simulate('select', book);
       wrapper.find('button').simulate('click');
 
       expect(history.push).toHaveBeenCalledWith(`${path}/${book.url}`);

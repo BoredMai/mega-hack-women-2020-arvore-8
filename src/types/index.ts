@@ -1,10 +1,3 @@
-export interface Book {
-  icon: string;
-  label: string;
-  url: string;
-  disabled?: boolean;
-}
-
 export interface Page {
   content: string;
   choiceText?: string;
@@ -14,6 +7,13 @@ export interface Page {
 
 export interface StoredPrompts {
   [key: string]: string;
+}
+
+export interface UserChoice {
+  icon: string;
+  label: string;
+  url?: string;
+  disabled?: boolean;
 }
 
 export interface UserPrompt {

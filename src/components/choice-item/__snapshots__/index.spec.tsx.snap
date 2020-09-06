@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ChoiceItem> renders properly 1`] = `
+<div
+  className="choice"
+  onClick={[Function]}
+>
+  <img
+    id="user-choice-Princesa"
+    src="src/assets/princesa"
+  />
+  <label
+    htmlFor="user-choice-Princesa"
+  >
+    Princesa
+  </label>
+</div>
+`;

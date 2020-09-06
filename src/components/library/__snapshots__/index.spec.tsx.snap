@@ -17,40 +17,40 @@ exports[`<Library> after fetching data renders properly 1`] = `
     <div
       className="bookshelf"
     >
-      <BookItem
-        book={
+      <ChoiceItem
+        choice={
           Object {
-            "icon": "princesa",
+            "icon": "library/princesa.png",
             "label": "Princesa",
             "url": "princesa",
           }
         }
         isSelected={false}
-        onSelectBook={[Function]}
+        onSelect={[Function]}
       />
-      <BookItem
-        book={
+      <ChoiceItem
+        choice={
           Object {
             "disabled": true,
-            "icon": "mago",
+            "icon": "library/mago.png",
             "label": "Mago",
             "url": "mago",
           }
         }
         isSelected={false}
-        onSelectBook={[Function]}
+        onSelect={[Function]}
       />
-      <BookItem
-        book={
+      <ChoiceItem
+        choice={
           Object {
             "disabled": true,
-            "icon": "unicornio",
+            "icon": "library/unicornio.png",
             "label": "Unicórnio",
             "url": "unicornio",
           }
         }
         isSelected={false}
-        onSelectBook={[Function]}
+        onSelect={[Function]}
       />
     </div>
   </ContentWrapper>

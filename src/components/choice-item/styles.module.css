@@ -1,4 +1,4 @@
-:local(.book) {
+:local(.choice) {
   align-items: center;
   border-radius: 3rem;
   cursor: pointer;
@@ -8,34 +8,34 @@
   padding: 1.5rem;
 }
 
-:local(.book:hover) {
+:local(.choice:hover) {
   background-color: #9362ff44;
 }
 
-:local(.book label) {
+:local(.choice label) {
   margin-top: 1.5rem;
 }
 
-:local(.book img) {
+:local(.choice img) {
   opacity: 0.8;
 }
 
-:local(.book-selected) {
-  composes: book;
+:local(.choice-selected) {
+  composes: choice;
   background-color: #9362ff66;
 }
 
-:local(.book-selected img) {
+:local(.choice-selected img) {
   opacity: 1;
 }
 
-:local(.book-disabled) {
-  composes: book;
+:local(.choice-disabled) {
+  composes: choice;
   cursor: auto;
   pointer-events: none;
 }
 
-:local(.book-disabled img) {
+:local(.choice-disabled img) {
   filter: grayscale(100%);
   --webkit-filter: grayscale(100%);
 }
