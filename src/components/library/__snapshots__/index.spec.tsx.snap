@@ -53,8 +53,4 @@ exports[`<Library> after fetching data renders properly 1`] = `
 </ContentWrapper>
 `;
 
-exports[`<Library> renders loading state 1`] = `
-<div>
-  Loading...
-</div>
-`;
+exports[`<Library> renders loading state 1`] = `<LoadingSpinner />`;

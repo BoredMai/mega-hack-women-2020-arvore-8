@@ -1,7 +1,9 @@
-import BookItem from 'components/book-item';
-import ContentWrapper from 'components/content-wrapper';
 import React, { useState } from 'react';
 import { useHistory, useRouteMatch } from 'react-router-dom';
+
+import BookItem from 'components/book-item';
+import ContentWrapper from 'components/content-wrapper';
+import LoadingSpinner from 'components/loading-spinner';
 
 import { Book } from 'types';
 
@@ -30,7 +32,7 @@ const Library = (): JSX.Element => {
       ]);
     }, 2000);
 
-    return <div>Loading...</div>;
+    return <LoadingSpinner />;
   }
 
   const navigateToStory = () => {
