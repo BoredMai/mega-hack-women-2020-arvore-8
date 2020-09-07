@@ -5,12 +5,14 @@ exports[`Storyteller renders properly 1`] = `
   className="storyteller"
 >
   <ContentWrapper>
-    <p
+    <div
       className="storyContent"
     >
-      Era uma vez um reino misterioso e sagrado onde habitavam seres mágicos, um povoado e sua princesa! Como ela era amada pelo seu povo! Sua inteligência, coragem e lealdade para com seu povo era admirável.
+      <p>
+        Era uma vez um reino misterioso e sagrado onde habitavam seres mágicos, um povoado e sua princesa! Como ela era amada pelo seu povo! Sua inteligência, coragem e lealdade para com seu povo era admirável.
 Seu nome era...
-    </p>
+      </p>
+    </div>
     <Prompt
       onPromptUpdate={[Function]}
       prompt={

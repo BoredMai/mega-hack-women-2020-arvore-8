@@ -26,7 +26,9 @@ const Storyteller = (): JSX.Element => {
   return (
     <div className={styles.storyteller}>
       <ContentWrapper>
-        <p className={styles.storyContent}>{content}</p>
+        <div className={styles.storyContent}>
+          <p>{content}</p>
+        </div>
         <Prompt onPromptUpdate={onPromptUpdate} prompt={prompt} />
       </ContentWrapper>
     </div>
