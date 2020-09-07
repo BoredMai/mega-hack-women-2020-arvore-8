@@ -34,15 +34,8 @@ describe('<Library>', () => {
       expect(wrapper.getElement()).toMatchSnapshot();
     });
 
-    it('selects book on item click', () => {
-      wrapper.find('ChoiceItem').at(0).simulate('select', book);
-
-      expect(wrapper.find('button')).toHaveLength(1);
-    });
-
-    it('navigates to selected book on button click', () => {
-      wrapper.find('ChoiceItem').at(0).simulate('select', book);
-      wrapper.find('button').simulate('click');
+    it('navigates to selected book on confirm', () => {
+      wrapper.find('Shelf').simulate('confirm', book);
 
       expect(history.push).toHaveBeenCalledWith(`${path}/${book.url}`);
     });

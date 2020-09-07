@@ -1,7 +1,7 @@
 export interface Page {
   content: string[];
   background?: string;
-  choice?: UserChoice;
+  choice?: ShelfItem;
   foreground?: string;
   next?: Page[];
   prompt?: UserPrompt;
@@ -11,7 +11,7 @@ export interface StoredPrompts {
   [key: string]: string;
 }
 
-export interface UserChoice {
+export interface ShelfItem {
   icon: string;
   label: string;
   url?: string;

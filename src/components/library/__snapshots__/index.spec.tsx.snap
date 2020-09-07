@@ -14,45 +14,30 @@ exports[`<Library> after fetching data renders properly 1`] = `
     <p>
       Agora, vamos escolher o personagem para a sua história?
     </p>
-    <div
-      className="bookshelf"
-    >
-      <ChoiceItem
-        choice={
+    <Shelf
+      items={
+        Array [
           Object {
             "icon": "library/princesa.png",
             "label": "Princesa",
             "url": "princesa",
-          }
-        }
-        isSelected={false}
-        onSelect={[Function]}
-      />
-      <ChoiceItem
-        choice={
+          },
           Object {
             "disabled": true,
             "icon": "library/mago.png",
             "label": "Mago",
             "url": "mago",
-          }
-        }
-        isSelected={false}
-        onSelect={[Function]}
-      />
-      <ChoiceItem
-        choice={
+          },
           Object {
             "disabled": true,
             "icon": "library/unicornio.png",
             "label": "Unicórnio",
             "url": "unicornio",
-          }
-        }
-        isSelected={false}
-        onSelect={[Function]}
-      />
-    </div>
+          },
+        ]
+      }
+      onConfirm={[Function]}
+    />
   </ContentWrapper>
 </div>
 `;

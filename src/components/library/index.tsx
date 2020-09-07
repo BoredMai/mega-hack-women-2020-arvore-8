@@ -1,20 +1,18 @@
 import React, { useState } from 'react';
 import { useHistory, useRouteMatch } from 'react-router-dom';
 
-import ChoiceItem from 'components/choice-item';
 import ContentWrapper from 'components/content-wrapper';
 import LoadingSpinner from 'components/loading-spinner';
+import Shelf from 'components/shelf';
 
-import { UserChoice } from 'types';
+import { ShelfItem } from 'types';
 
-import styles from './styles.module.css';
 import decorations from 'styles/decorations.module.css';
 
 const Library = (): JSX.Element => {
   const history = useHistory();
   const { path } = useRouteMatch();
-  const [books, setBooks] = useState<Array<UserChoice>>(null);
-  const [selection, selectBook] = useState<UserChoice>(null);
+  const [books, setBooks] = useState<Array<ShelfItem>>(null);
 
   if (!books) {
     /**
@@ -45,8 +43,8 @@ const Library = (): JSX.Element => {
     );
   }
 
-  const navigateToStory = () => {
-    history.push(`${path}/${selection.url}`);
+  const navigateToStory = (selectedItem: ShelfItem) => {
+    history.push(`${path}/${selectedItem.url}`);
   };
 
   return (
@@ -57,19 +55,7 @@ const Library = (): JSX.Element => {
           Muito bem, Clarice: Você está a um passo de ser uma grande autora!
         </p>
         <p>Agora, vamos escolher o personagem para a sua história?</p>
-        <div className={styles.bookshelf}>
-          {books.map((book) => (
-            <ChoiceItem
-              key={book.label}
-              choice={book}
-              isSelected={book === selection}
-              onSelect={selectBook}
-            />
-          ))}
-        </div>
-        {selection && (
-          <button onClick={navigateToStory}>Criar meu personagem</button>
-        )}
+        <Shelf items={books} onConfirm={navigateToStory} />
       </ContentWrapper>
     </div>
   );

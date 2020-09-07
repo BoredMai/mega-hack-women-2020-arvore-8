@@ -5,6 +5,7 @@ import decorations from '../styles/decorations.module.css';
 export const skillPage: Page = {
   background: decorations.castle,
   content: [`Princesa {characterName} era uma excelente...`],
+  foreground: decorations.princessWithBird,
 };
 
 export const namePage: Page = {

@@ -1,8 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<ChoiceItem> renders properly 1`] = `
+exports[`<Item> renders properly 1`] = `
 <div
-  className="choice"
+  className="item"
   onClick={[Function]}
 >
   <img
