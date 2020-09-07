@@ -18,19 +18,19 @@ exports[`<Library> after fetching data renders properly 1`] = `
       items={
         Array [
           Object {
-            "icon": "library/princesa.png",
+            "icon": "princess.png",
             "label": "Princesa",
             "url": "princesa",
           },
           Object {
             "disabled": true,
-            "icon": "library/mago.png",
+            "icon": "wizard.png",
             "label": "Mago",
             "url": "mago",
           },
           Object {
             "disabled": true,
-            "icon": "library/unicornio.png",
+            "icon": "unicorn.png",
             "label": "Unicórnio",
             "url": "unicornio",
           },

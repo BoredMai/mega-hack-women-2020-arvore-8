@@ -8,11 +8,15 @@ import styles from './styles.module.css';
 interface Props {
   items: ShelfItem[];
   onConfirm: (item: ShelfItem) => void;
+  label?: string;
 }
-const Shelf = (props: Props): JSX.Element => {
-  const [selectedItem, selectItem] = useState<ShelfItem>(null);
 
-  const { items, onConfirm } = props;
+const Shelf = ({ items, label = 'Avançar', onConfirm }: Props): JSX.Element => {
+  if (items.length <= 1) {
+    return <button onClick={() => onConfirm(items[0])}>{label}</button>;
+  }
+
+  const [selectedItem, selectItem] = useState<ShelfItem>(null);
 
   return (
     <Fragment>
@@ -27,9 +31,7 @@ const Shelf = (props: Props): JSX.Element => {
         ))}
       </div>
       {selectedItem && (
-        <button onClick={() => onConfirm(selectedItem)}>
-          Criar meu personagem
-        </button>
+        <button onClick={() => onConfirm(selectedItem)}>{label}</button>
       )}
     </Fragment>
   );

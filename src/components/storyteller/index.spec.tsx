@@ -1,6 +1,6 @@
 import { shallow, ShallowWrapper } from 'enzyme';
 
-import { rootPage, namePage } from 'pages';
+import { rootPage, namePage, skillPage } from 'pages';
 import React from 'react';
 
 import Storyteller from '.';
@@ -24,6 +24,25 @@ describe('Storyteller', () => {
 
     it('renders properly', () => {
       expect(wrapper.getElement()).toMatchSnapshot();
+    });
+  });
+
+  describe('with branching', () => {
+    beforeEach(() => {
+      jest.clearAllMocks();
+      useStateSpy
+        .mockImplementationOnce(() => [skillPage, setPageMock])
+        .mockImplementationOnce(() => [{}, setStoryPromptMock]);
+      wrapper = shallow(<Storyteller username={username} />) as ShallowWrapper;
+    });
+
+    it('renders properly', () => {
+      expect(wrapper.getElement()).toMatchSnapshot();
+    });
+
+    it('moves to next page on shelf confirm', () => {
+      wrapper.find('Shelf').simulate('confirm', skillPage.next[0]);
+      expect(setPageMock).toHaveBeenCalledWith(skillPage.next[0]);
     });
   });
 

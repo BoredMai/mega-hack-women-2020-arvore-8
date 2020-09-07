@@ -7,7 +7,7 @@ exports[`<Item> renders properly 1`] = `
 >
   <img
     id="user-choice-Princesa"
-    src="src/assets/princesa"
+    src="src/assets/icons/princess.png"
   />
   <label
     htmlFor="user-choice-Princesa"

@@ -4,9 +4,10 @@ import React, { Fragment, useState } from 'react';
 import ContentWrapper from 'components/content-wrapper';
 import Prompt from 'components/prompt';
 import { rootPage } from 'pages';
-import { Page, StoredPrompts } from 'types';
+import { Page, ShelfItem, StoredPrompts } from 'types';
 
 import styles from './styles.module.css';
+import Shelf from 'components/shelf';
 
 interface Props {
   username: string;
@@ -41,11 +42,17 @@ const Storyteller = (props: Props): JSX.Element => {
     setPage(nextPage);
   };
 
+  const onShelfConfirm = (item: ShelfItem): void => {
+    const nextPage = next.find((p) => p.choice === item) || next[0];
+    setPage(nextPage);
+  };
+
   let nextStep: JSX.Element;
   if (prompt) {
     nextStep = <Prompt onPromptUpdate={onPromptUpdate} prompt={prompt} />;
-  } /* istanbul ignore next */ else if (next && next.length === 1) {
-    nextStep = <button onClick={() => setPage(next[0])}>Avançar</button>;
+  } /* istanbul ignore else */ else if (next) {
+    const items = next.map((page) => page.choice).filter((item) => !!item);
+    nextStep = <Shelf items={items} onConfirm={onShelfConfirm} />;
   }
 
   return (

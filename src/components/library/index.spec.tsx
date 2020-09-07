@@ -11,7 +11,7 @@ jest.mock('react-router-dom', () => ({
 jest.useFakeTimers();
 
 describe('<Library>', () => {
-  const book = { icon: 'princesa', label: 'Princesa', url: 'princesa' };
+  const book = { icon: 'princess.png', label: 'Princesa', url: 'princesa' };
   const history = { push: jest.fn() };
   const path = 'path';
   let wrapper: ShallowWrapper;

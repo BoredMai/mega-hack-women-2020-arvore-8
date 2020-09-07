@@ -1,12 +1,13 @@
 :local(.castle) {
-  background: url('/src/assets/castle.png');
+  background: url('/src/assets/backgrounds/castle.png');
   background-color: #c3e4eb;
-  background-repeat: no-repeat;
   background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 :local(.grass) {
-  background: url('/src/assets/grass.png');
+  background: url('/src/assets/backgrounds/grass.png');
   background-repeat: repeat-x;
   background-position: bottom;
   display: flex;
@@ -14,8 +15,24 @@
   height: 100vh;
 }
 
+:local(.library) {
+  background: url('/src/assets/backgrounds/library.png');
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+:local(.princess) {
+  background: url('/src/assets/foregrounds/princess.png');
+  background-repeat: no-repeat;
+  background-position: calc(50% - 40rem) 100%;
+  height: 100vh;
+  position: absolute;
+  width: 100vw;
+}
+
 :local(.princess-with-bird) {
-  background: url('/src/assets/princess_bird.png');
+  background: url('/src/assets/foregrounds/princess_bird.png');
   background-repeat: no-repeat;
   background-position: calc(50% - 40rem) 100%;
   height: 100vh;
