@@ -1,0 +1,6 @@
+:local(.shelf) {
+  display: flex;
+  justify-content: space-between;
+  margin: 3rem;
+  width: 100%;
+}

@@ -1,0 +1,41 @@
+:local(.item) {
+  align-items: center;
+  border-radius: 3rem;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  font-size: 1.8rem;
+  padding: 1.5rem;
+}
+
+:local(.item:hover) {
+  background-color: #9362ff44;
+}
+
+:local(.item label) {
+  margin-top: 1.5rem;
+}
+
+:local(.item img) {
+  opacity: 0.8;
+}
+
+:local(.item-selected) {
+  composes: item;
+  background-color: #9362ff66;
+}
+
+:local(.item-selected img) {
+  opacity: 1;
+}
+
+:local(.item-disabled) {
+  composes: item;
+  cursor: auto;
+  pointer-events: none;
+}
+
+:local(.item-disabled img) {
+  filter: grayscale(100%);
+  --webkit-filter: grayscale(100%);
+}

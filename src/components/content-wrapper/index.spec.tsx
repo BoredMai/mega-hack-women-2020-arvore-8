@@ -1,13 +1,17 @@
 import { shallow, ShallowWrapper } from 'enzyme';
 import React from 'react';
 
-import App from '.';
+import ContentWrapper from '.';
 
-describe('<App>', () => {
+describe('<ContentWrapper>', () => {
   let wrapper: ShallowWrapper;
 
   beforeEach(() => {
-    wrapper = shallow(<App />) as ShallowWrapper;
+    wrapper = shallow(
+      <ContentWrapper>
+        <div>Content Wrapper</div>
+      </ContentWrapper>,
+    ) as ShallowWrapper;
   });
 
   it('renders properly', () => {

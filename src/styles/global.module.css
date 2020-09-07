@@ -1,0 +1,41 @@
+:global(.content-wrapper) {
+  align-items: center;
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  max-width: 90rem;
+  padding-top: 25rem;
+}
+
+:global(a) {
+  color: inherit;
+  text-decoration: none;
+}
+
+:global(button) {
+  border: none;
+  border-radius: 6px;
+  background-color: #8553f4;
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 2.4rem;
+  font-weight: bold;
+  padding: 1rem 3rem;
+  text-transform: uppercase;
+}
+
+:global(button:hover) {
+  background-color: #9362ff;
+}
+
+:global(h1) {
+  color: #8553f4;
+  font-size: 4.2rem;
+}
+
+:global(p) {
+  font-size: 2.8rem;
+  margin: 0;
+  margin-bottom: 2rem;
+  text-align: center;
+}

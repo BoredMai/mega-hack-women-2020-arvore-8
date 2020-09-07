@@ -1,13 +1,13 @@
 import { shallow, ShallowWrapper } from 'enzyme';
 import React from 'react';
 
-import App from '.';
+import LoadingSpinner from '.';
 
-describe('<App>', () => {
+describe('<LoadingSpinner>', () => {
   let wrapper: ShallowWrapper;
 
   beforeEach(() => {
-    wrapper = shallow(<App />) as ShallowWrapper;
+    wrapper = shallow(<LoadingSpinner />) as ShallowWrapper;
   });
 
   it('renders properly', () => {

@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Shelf> renders properly 1`] = `
+<React.Fragment>
+  <div
+    className="shelf"
+  >
+    <Item
+      isSelected={false}
+      item={
+        Object {
+          "icon": "library/princesa.png",
+          "label": "Princesa",
+          "url": "princesa",
+        }
+      }
+      onSelect={[Function]}
+    />
+    <Item
+      isSelected={false}
+      item={
+        Object {
+          "disabled": true,
+          "icon": "library/mago.png",
+          "label": "Mago",
+          "url": "mago",
+        }
+      }
+      onSelect={[Function]}
+    />
+    <Item
+      isSelected={false}
+      item={
+        Object {
+          "disabled": true,
+          "icon": "library/unicornio.png",
+          "label": "Unicórnio",
+          "url": "unicornio",
+        }
+      }
+      onSelect={[Function]}
+    />
+  </div>
+</React.Fragment>
+`;

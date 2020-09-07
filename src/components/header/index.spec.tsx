@@ -1,13 +1,18 @@
 import { shallow, ShallowWrapper } from 'enzyme';
+
 import React from 'react';
 
-import App from '.';
+import Header from '.';
 
-describe('<App>', () => {
+describe('Header', () => {
+  const user = {
+    first: 'Clarice',
+    last: 'Lispector',
+  };
   let wrapper: ShallowWrapper;
 
   beforeEach(() => {
-    wrapper = shallow(<App />) as ShallowWrapper;
+    wrapper = shallow(<Header user={user} />) as ShallowWrapper;
   });
 
   it('renders properly', () => {
