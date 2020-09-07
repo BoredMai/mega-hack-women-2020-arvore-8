@@ -6,9 +6,9 @@ name: CI
 # events but only for the main branch
 on:
   push:
-    branches: [ main ]
+    branches: [main]
   pull_request:
-    branches: [ main ]
+    branches: [main]
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -24,7 +24,6 @@ jobs:
       - uses: actions/setup-node@v2-beta
         with:
           node-version: '14'
-      - run: |
-          yarn install
-          yarn test
-          yarn build
+      - run: yarn install
+      - run: yarn test
+      - run: yarn build
