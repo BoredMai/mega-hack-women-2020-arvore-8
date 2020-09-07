@@ -1,0 +1,38 @@
+:local(.storyteller) {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+:local(.story-content) {
+  align-items: center;
+  border-image: url('/src/assets/scroll.png') 60 round;
+  border-style: solid;
+  border-width: 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 3rem;
+  max-width: 70rem;
+  padding: 5rem 0;
+  position: relative;
+}
+
+:local(.story-content::before) {
+  background-color: white;
+  content: '';
+  height: 100%;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+:local(.story-content > *) {
+  position: relative;
+  z-index: 1;
+}
+
+:local(.story-content > button) {
+  margin-top: 2rem;
+}

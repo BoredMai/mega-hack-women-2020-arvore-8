@@ -1,0 +1,9 @@
+:local(.header) {
+  background-color: #45cbcc;
+  color: #eeeeee;
+  display: flex;
+  font-size: 1.6rem;
+  font-weight: 600;
+  justify-content: space-between;
+  padding: 1rem;
+}

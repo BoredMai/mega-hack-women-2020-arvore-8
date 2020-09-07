@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Prompt> renders properly 1`] = `
+<div
+  className="prompt"
+>
+  <label
+    htmlFor="promptInput"
+  />
+  <input
+    id="promptInput"
+    onChange={[Function]}
+    type="input"
+  />
+  <button
+    onClick={[Function]}
+  >
+    OK
+  </button>
+</div>
+`;

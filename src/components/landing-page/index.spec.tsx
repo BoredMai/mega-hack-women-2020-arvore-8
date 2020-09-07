@@ -1,13 +1,13 @@
 import { shallow, ShallowWrapper } from 'enzyme';
 import React from 'react';
 
-import App from '.';
+import LandingPage from '.';
 
-describe('<App>', () => {
+describe('<LandingPage>', () => {
   let wrapper: ShallowWrapper;
 
   beforeEach(() => {
-    wrapper = shallow(<App />) as ShallowWrapper;
+    wrapper = shallow(<LandingPage />) as ShallowWrapper;
   });
 
   it('renders properly', () => {

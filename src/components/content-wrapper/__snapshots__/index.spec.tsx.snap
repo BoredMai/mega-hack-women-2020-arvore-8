@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ContentWrapper> renders properly 1`] = `
+<div
+  className="content-wrapper"
+>
+  <div>
+    Content Wrapper
+  </div>
+</div>
+`;

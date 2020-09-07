@@ -1,0 +1,51 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Library> after fetching data renders properly 1`] = `
+<div
+  className="grass"
+>
+  <ContentWrapper>
+    <h1>
+      Colha uma História
+    </h1>
+    <p>
+      Muito bem, Clarice: Você está a um passo de ser uma grande autora!
+    </p>
+    <p>
+      Agora, vamos escolher o personagem para a sua história?
+    </p>
+    <Shelf
+      items={
+        Array [
+          Object {
+            "icon": "library/princesa.png",
+            "label": "Princesa",
+            "url": "princesa",
+          },
+          Object {
+            "disabled": true,
+            "icon": "library/mago.png",
+            "label": "Mago",
+            "url": "mago",
+          },
+          Object {
+            "disabled": true,
+            "icon": "library/unicornio.png",
+            "label": "Unicórnio",
+            "url": "unicornio",
+          },
+        ]
+      }
+      onConfirm={[Function]}
+    />
+  </ContentWrapper>
+</div>
+`;
+
+exports[`<Library> renders loading state 1`] = `
+<div
+  className="grass"
+>
+  <LoadingSpinner />
+</div>
+`;

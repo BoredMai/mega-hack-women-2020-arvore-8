@@ -1,0 +1,68 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyteller with prompt renders properly 1`] = `
+<React.Fragment>
+  <div
+    className="storyteller castle"
+  >
+    <ContentWrapper>
+      <div
+        className="storyContent"
+      >
+        <p>
+          O nome da princesa era...
+        </p>
+        <p>
+          Hmm... como era o nome dela mesmo?
+        </p>
+        <p>
+          Clarice, escolha um nome para a princesa!
+        </p>
+        <Prompt
+          onPromptUpdate={[Function]}
+          prompt={
+            Object {
+              "key": "characterName",
+              "placeholder": "Nome da princesa",
+              "type": "text",
+            }
+          }
+        />
+      </div>
+    </ContentWrapper>
+  </div>
+  <div
+    className="princessWithBird"
+  />
+</React.Fragment>
+`;
+
+exports[`Storyteller without branching renders properly 1`] = `
+<React.Fragment>
+  <div
+    className="storyteller castle"
+  >
+    <ContentWrapper>
+      <div
+        className="storyContent"
+      >
+        <p>
+          Era uma vez um reino misterioso e sagrado onde habitavam seres mágicos, um povoado e sua princesa.
+        </p>
+        <p>
+          Como ela era amada pelo seu povo!
+        </p>
+        <p>
+          Sua inteligência, coragem e lealdade para com seu povo era admirável.
+        </p>
+        <button
+          onClick={[Function]}
+        >
+          Avançar
+        </button>
+      </div>
+    </ContentWrapper>
+  </div>
+  <div />
+</React.Fragment>
+`;
