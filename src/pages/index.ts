@@ -2,6 +2,15 @@ import { Page } from 'types';
 
 import decorations from 'styles/decorations.module.css';
 
+export const fairyPage: Page = {
+  background: decorations.mountain,
+  content: [
+    `Logo que a fada a viu ela disse:`,
+    `- Nobre {characterName}, eu aguardava ansiosamente sua chegada! Vou ensinar uma poção mágica para você usar para o bem de seu reino:`,
+  ],
+  foreground: decorations.princessWithFairy,
+};
+
 export const mountainPage: Page = {
   background: decorations.mountain,
   choice: {
@@ -14,6 +23,7 @@ export const mountainPage: Page = {
     `Lá haverá uma lente de aumento que te mostrará onde a pequena fada brilhante estará. E assim ela o fez!`,
   ],
   foreground: decorations.princess,
+  next: [fairyPage],
 };
 
 export const forestPage: Page = {

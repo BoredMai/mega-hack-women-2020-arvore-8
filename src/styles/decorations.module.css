@@ -46,3 +46,13 @@
   position: absolute;
   width: 100vw;
 }
+
+:local(.princess-with-fairy) {
+  background: url('/src/assets/foregrounds/princess.png'),
+    url('/src/assets/foregrounds/fairy.png');
+  background-repeat: no-repeat;
+  background-position: calc(50% - 40rem) 100%, calc(50% + 45rem) 50%;
+  height: 100vh;
+  position: absolute;
+  width: 100vw;
+}
