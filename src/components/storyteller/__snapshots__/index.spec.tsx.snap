@@ -16,7 +16,7 @@ exports[`Storyteller with prompt renders properly 1`] = `
           Hmm... como era o nome dela mesmo?
         </p>
         <p>
-          {username}, escolha um nome para a princesa!
+          Clarice, escolha um nome para a princesa!
         </p>
         <Prompt
           onPromptUpdate={[Function]}

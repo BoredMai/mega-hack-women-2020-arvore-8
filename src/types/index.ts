@@ -18,6 +18,11 @@ export interface ShelfItem {
   disabled?: boolean;
 }
 
+export interface User {
+  first: string;
+  last: string;
+}
+
 export interface UserPrompt {
   key: string;
   type: string;

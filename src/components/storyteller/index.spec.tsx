@@ -9,6 +9,7 @@ describe('Storyteller', () => {
   const setPageMock = jest.fn().mockName('setPage');
   const setStoryPromptMock = jest.fn().mockName('setStoryPrompt');
   const useStateSpy = jest.spyOn(React, 'useState');
+  const username = 'Clarice';
 
   let wrapper: ShallowWrapper;
 
@@ -18,7 +19,7 @@ describe('Storyteller', () => {
       useStateSpy
         .mockImplementationOnce(() => [rootPage, setPageMock])
         .mockImplementationOnce(() => [{}, setStoryPromptMock]);
-      wrapper = shallow(<Storyteller />) as ShallowWrapper;
+      wrapper = shallow(<Storyteller username={username} />) as ShallowWrapper;
     });
 
     it('renders properly', () => {
@@ -31,8 +32,8 @@ describe('Storyteller', () => {
       jest.clearAllMocks();
       useStateSpy
         .mockImplementationOnce(() => [namePage, setPageMock])
-        .mockImplementationOnce(() => [{}, setStoryPromptMock]);
-      wrapper = shallow(<Storyteller />) as ShallowWrapper;
+        .mockImplementationOnce(() => [{ username }, setStoryPromptMock]);
+      wrapper = shallow(<Storyteller username={username} />) as ShallowWrapper;
     });
 
     it('renders properly', () => {
@@ -46,6 +47,7 @@ describe('Storyteller', () => {
 
       expect(setStoryPromptMock).toHaveBeenCalledWith({
         promptKey: promptValue,
+        username,
       });
       expect(setPageMock).toHaveBeenCalledWith(namePage.next[0]);
     });

@@ -9,13 +9,18 @@ import Storyteller from 'components/storyteller';
 import styles from './styles.module.css';
 
 const App = (): JSX.Element => {
+  const user = {
+    first: 'Clarice',
+    last: 'Lispector',
+  };
+
   return (
     <Router>
       <div className={styles.main}>
-        <Header />
+        <Header user={user} />
         <Switch>
           <Route path='/biblioteca/:story'>
-            <Storyteller />
+            <Storyteller username={user.first} />
           </Route>
           <Route path='/biblioteca'>
             <Library />

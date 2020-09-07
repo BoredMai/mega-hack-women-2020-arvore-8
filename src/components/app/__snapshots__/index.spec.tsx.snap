@@ -5,12 +5,21 @@ exports[`<App> renders properly 1`] = `
   <div
     className="main"
   >
-    <Header />
+    <Header
+      user={
+        Object {
+          "first": "Clarice",
+          "last": "Lispector",
+        }
+      }
+    />
     <Switch>
       <Route
         path="/biblioteca/:story"
       >
-        <Storyteller />
+        <Storyteller
+          username="Clarice"
+        />
       </Route>
       <Route
         path="/biblioteca"

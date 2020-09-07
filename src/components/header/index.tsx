@@ -1,14 +1,24 @@
 import React from 'react';
+import { User } from 'types';
 
 import styles from './styles.module.css';
 
-const Header = (): JSX.Element => {
+interface Props {
+  user: User;
+}
+
+const Header = (props: Props): JSX.Element => {
+  const {
+    user: { first, last },
+  } = props;
+
   return (
     <div className={styles.header}>
       <div>Árvore</div>
       <div>
-        <span>X</span>
-        <span>Maianne Ribeiro</span>
+        <span>
+          {first} {last}
+        </span>
       </div>
     </div>
   );

@@ -8,11 +8,28 @@ import { Page, StoredPrompts } from 'types';
 
 import styles from './styles.module.css';
 
-const Storyteller = (): JSX.Element => {
+interface Props {
+  username: string;
+}
+
+const Storyteller = (props: Props): JSX.Element => {
+  const { username } = props;
+
   const [page, setPage] = useState<Page>(rootPage);
-  const [storedPrompts, setPrompt] = useState<StoredPrompts>({});
+  const [storedPrompts, setPrompt] = useState<StoredPrompts>({ username });
 
   const { background, content, foreground, prompt, next } = page;
+
+  const formatContent = (contentString: string): string => {
+    let formattedString = contentString;
+
+    Object.keys(storedPrompts).forEach((key) => {
+      const regex = new RegExp(`{${key}}`, 'g');
+      formattedString = formattedString.replace(regex, storedPrompts[key]);
+    });
+
+    return formattedString;
+  };
 
   const onPromptUpdate = (key: string, value: string): void => {
     setPrompt({
@@ -37,7 +54,7 @@ const Storyteller = (): JSX.Element => {
         <ContentWrapper>
           <div className={styles.storyContent}>
             {content.map((c, i) => (
-              <p key={i}>{c}</p>
+              <p key={i}>{formatContent(c)}</p>
             ))}
             {nextStep}
           </div>

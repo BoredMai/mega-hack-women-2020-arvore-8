@@ -9,10 +9,9 @@ exports[`Header renders properly 1`] = `
   </div>
   <div>
     <span>
-      X
-    </span>
-    <span>
-      Maianne Ribeiro
+      Clarice
+       
+      Lispector
     </span>
   </div>
 </div>
