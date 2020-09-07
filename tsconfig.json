@@ -13,6 +13,11 @@
     "removeComments": true,
     "sourceMap": true,
     "target": "es5",
+    "paths": {
+      "components/*": ["components/*"],
+      "pages": ["pages"],
+      "styles/*": ["styles/*"]
+    },
     "plugins": [
       {
         "name": "typescript-plugin-css-modules",
