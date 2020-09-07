@@ -2,6 +2,50 @@ import { Page } from 'types';
 
 import decorations from 'styles/decorations.module.css';
 
+export const mountainPage: Page = {
+  background: decorations.mountain,
+  choice: {
+    icon: 'mountain.png',
+    label: 'Montanha',
+  },
+  content: [
+    `Ahhh, a escolha das alturas!`,
+    `Agora você deverá ir a montanha em forma de troll. Escale até a ponta do nariz dele. Entre na narina esquerda e suba até o olho.`,
+    `Lá haverá uma lente de aumento que te mostrará onde a pequena fada brilhante estará. E assim ela o fez!`,
+  ],
+  foreground: decorations.princess,
+};
+
+export const forestPage: Page = {
+  content: [],
+  choice: {
+    disabled: true,
+    icon: 'forest.png',
+    label: 'Floresta',
+  },
+};
+
+export const destinationPage: Page = {
+  background: decorations.library,
+  content: [
+    `Ele também pediu que {characterName} escolhesse com o coração.`,
+    `Escolha o destino de {characterName}:`,
+  ],
+  foreground: decorations.princess,
+  next: [mountainPage, forestPage],
+};
+
+export const bookPage: Page = {
+  background: decorations.library,
+  content: [
+    `Ela pegou a escada, subiu até o último degrau, se esticou toda e conseguiu alcançá-lo.`,
+    `- Ufa, finalmente – disse ela.`,
+    `O livro repentinamente começou a falar e explicou que, após aberto, ela teria que completar uma tarefa.`,
+  ],
+  foreground: decorations.princess,
+  next: [destinationPage],
+};
+
 export const libraryPage: Page = {
   background: decorations.library,
   content: [
@@ -9,6 +53,7 @@ export const libraryPage: Page = {
     `Um belo dia ela resolveu ir até o final, caminhou os três dias e foi até a última estante. Ao olhar para cima, viu um livro que brilhava e pensou "Será que é mágico?"`,
   ],
   foreground: decorations.princess,
+  next: [bookPage],
 };
 
 export const wizardPage: Page = {

@@ -22,6 +22,13 @@
   background-size: cover;
 }
 
+:local(.mountain) {
+  background: url('/src/assets/backgrounds/mountain.png');
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 :local(.princess) {
   background: url('/src/assets/foregrounds/princess.png');
   background-repeat: no-repeat;
