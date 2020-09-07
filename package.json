@@ -5,6 +5,7 @@
   "main": "index.js",
   "author": "Maianne Ribeiro <mai628r@gmail.com>",
   "license": "MIT",
+  "homepage": "https://boredmai.github.io/mega-hack-women-2020-arvore-8/",
   "scripts": {
     "build": "webpack",
     "lint": "eslint ./src --ext .tsx",
