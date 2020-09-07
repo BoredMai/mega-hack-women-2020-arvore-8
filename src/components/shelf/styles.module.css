@@ -1,6 +1,6 @@
 :local(.shelf) {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   margin: 3rem;
   width: 100%;
 }

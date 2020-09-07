@@ -20,7 +20,7 @@ const Item = (props: Props): JSX.Element => {
     styles.item;
   return (
     <div className={className} onClick={() => onSelect(item)}>
-      <img id={`user-choice-${label}`} src={`src/assets/${icon}`} />
+      <img id={`user-choice-${label}`} src={`src/assets/icons/${icon}`} />
       <label htmlFor={`user-choice-${label}`}>{label}</label>
     </div>
   );

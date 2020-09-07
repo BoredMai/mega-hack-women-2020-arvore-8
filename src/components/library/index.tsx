@@ -20,16 +20,16 @@ const Library = (): JSX.Element => {
      */
     setTimeout(() => {
       setBooks([
-        { icon: 'library/princesa.png', label: 'Princesa', url: 'princesa' },
+        { icon: 'princess.png', label: 'Princesa', url: 'princesa' },
         {
           disabled: true,
-          icon: 'library/mago.png',
+          icon: 'wizard.png',
           label: 'Mago',
           url: 'mago',
         },
         {
           disabled: true,
-          icon: 'library/unicornio.png',
+          icon: 'unicorn.png',
           label: 'Unicórnio',
           url: 'unicornio',
         },

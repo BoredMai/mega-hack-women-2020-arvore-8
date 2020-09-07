@@ -1,5 +1,42 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Storyteller with branching renders properly 1`] = `
+<React.Fragment>
+  <div
+    className="storyteller castle"
+  >
+    <ContentWrapper>
+      <div
+        className="storyContent"
+      >
+        <p>
+          Princesa {characterName} era uma grande...
+        </p>
+        <Shelf
+          items={
+            Array [
+              Object {
+                "disabled": true,
+                "icon": "sword.png",
+                "label": "Guerreira",
+              },
+              Object {
+                "icon": "book.png",
+                "label": "Estudiosa",
+              },
+            ]
+          }
+          onConfirm={[Function]}
+        />
+      </div>
+    </ContentWrapper>
+  </div>
+  <div
+    className="princessWithBird"
+  />
+</React.Fragment>
+`;
+
 exports[`Storyteller with prompt renders properly 1`] = `
 <React.Fragment>
   <div
@@ -55,11 +92,10 @@ exports[`Storyteller without branching renders properly 1`] = `
         <p>
           Sua inteligência, coragem e lealdade para com seu povo era admirável.
         </p>
-        <button
-          onClick={[Function]}
-        >
-          Avançar
-        </button>
+        <Shelf
+          items={Array []}
+          onConfirm={[Function]}
+        />
       </div>
     </ContentWrapper>
   </div>

@@ -5,16 +5,16 @@ import Shelf from '.';
 
 describe('<Shelf>', () => {
   const items = [
-    { icon: 'library/princesa.png', label: 'Princesa', url: 'princesa' },
+    { icon: 'princess.png', label: 'Princesa', url: 'princesa' },
     {
       disabled: true,
-      icon: 'library/mago.png',
+      icon: 'wizard.png',
       label: 'Mago',
       url: 'mago',
     },
     {
       disabled: true,
-      icon: 'library/unicornio.png',
+      icon: 'unicorn.png',
       label: 'Unicórnio',
       url: 'unicornio',
     },
@@ -31,6 +31,27 @@ describe('<Shelf>', () => {
 
   it('renders properly', () => {
     expect(wrapper.getElement()).toMatchSnapshot();
+  });
+
+  it('renders properly with custom label', () => {
+    wrapper.setProps({ label: 'Continuar' });
+    expect(wrapper.getElement()).toMatchSnapshot();
+  });
+
+  describe('with single item', () => {
+    beforeEach(() => {
+      wrapper.setProps({ items: [items[0]] });
+    });
+
+    it('renders properly', () => {
+      expect(wrapper.getElement()).toMatchSnapshot();
+    });
+
+    it('calls prop on selection confirm', () => {
+      wrapper.find('button').simulate('click');
+
+      expect(props.onConfirm).toHaveBeenCalledWith(items[0]);
+    });
   });
 
   describe('with item selection', () => {

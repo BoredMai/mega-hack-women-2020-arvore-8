@@ -1,11 +1,130 @@
 import { Page } from 'types';
 
-import decorations from '../styles/decorations.module.css';
+import decorations from 'styles/decorations.module.css';
+
+export const healthPage: Page = {
+  background: decorations.throneRoom,
+  choice: {
+    icon: 'potion_purple.png',
+    label: 'Saúde para todos',
+  },
+  content: [
+    `A fada então soprou glitter por toda princesa e bradou:`,
+    `- Querida {characterName}, seu reino foi abençoado conforme sua vontade e você será uma bondosa rainha um dia!`,
+    `Ela então, acordou e estava em seu castelo. Todos viveram felizes para sempre.`,
+  ],
+  foreground: decorations.princess,
+};
+
+export const happinessPage: Page = {
+  background: decorations.throneRoom,
+  choice: {
+    icon: 'potion_pink.png',
+    label: 'Felicidade para todos',
+  },
+  content: [
+    `A fada então soprou glitter por toda princesa e bradou:`,
+    `- Querida {characterName}, seu reino foi abençoado conforme sua vontade e você será uma bondosa rainha um dia!`,
+    `Ela então, acordou e estava em seu castelo. Todos viveram felizes para sempre.`,
+  ],
+  foreground: decorations.princess,
+};
+
+export const fairyPage: Page = {
+  background: decorations.mountain,
+  content: [
+    `Logo que a fada a viu ela disse:`,
+    `- Nobre {characterName}, eu aguardava ansiosamente sua chegada! Vou ensinar uma poção mágica para você usar para o bem de seu reino:`,
+  ],
+  foreground: decorations.princessWithFairy,
+  next: [happinessPage, healthPage],
+};
+
+export const mountainPage: Page = {
+  background: decorations.mountain,
+  choice: {
+    icon: 'mountain.png',
+    label: 'Montanha',
+  },
+  content: [
+    `Ahhh, a escolha das alturas!`,
+    `Agora você deverá ir a montanha em forma de troll. Escale até a ponta do nariz dele. Entre na narina esquerda e suba até o olho.`,
+    `Lá haverá uma lente de aumento que te mostrará onde a pequena fada brilhante estará. E assim ela o fez!`,
+  ],
+  foreground: decorations.princess,
+  next: [fairyPage],
+};
+
+export const forestPage: Page = {
+  content: [],
+  choice: {
+    disabled: true,
+    icon: 'forest.png',
+    label: 'Floresta',
+  },
+};
+
+export const destinationPage: Page = {
+  background: decorations.library,
+  content: [
+    `Ele também pediu que {characterName} escolhesse com o coração.`,
+    `Escolha o destino de {characterName}:`,
+  ],
+  foreground: decorations.princessWithBook,
+  next: [mountainPage, forestPage],
+};
+
+export const bookPage: Page = {
+  background: decorations.library,
+  content: [
+    `Ela pegou a escada, subiu até o último degrau, se esticou toda e conseguiu alcançá-lo.`,
+    `- Ufa, finalmente – disse ela.`,
+    `O livro repentinamente começou a falar e explicou que, após aberto, ela teria que completar uma tarefa.`,
+  ],
+  foreground: decorations.princessWithBook,
+  next: [destinationPage],
+};
+
+export const libraryPage: Page = {
+  background: decorations.library,
+  content: [
+    `A biblioteca do palácio era tão grande que, para percorrê-la por inteiro, levava-se três dias.`,
+    `Um belo dia ela resolveu ir até o final, caminhou os três dias e foi até a última estante. Ao olhar para cima, viu um livro que brilhava e pensou "Será que é mágico?"`,
+  ],
+  foreground: decorations.princess,
+  next: [bookPage],
+};
+
+export const wizardPage: Page = {
+  background: decorations.library,
+  choice: {
+    icon: 'book.png',
+    label: 'Estudiosa',
+  },
+  content: [
+    `Princesa {characterName} amava estudar. Todos do povoado sempre sabiam onde encontrá-la. Quando alguém perguntava:`,
+    `- Onde está {characterName}? Ela precisa almoçar!`,
+    `O povoado inteiro respondia em peso:`,
+    `- Princesa {characterName} está no lugar onde mora sua alegria, a biblioteca do palácio!`,
+  ],
+  foreground: decorations.princess,
+  next: [libraryPage],
+};
+
+export const warriorPage: Page = {
+  content: [],
+  choice: {
+    disabled: true,
+    icon: 'sword.png',
+    label: 'Guerreira',
+  },
+};
 
 export const skillPage: Page = {
   background: decorations.castle,
-  content: [`Princesa {characterName} era uma excelente...`],
+  content: [`Princesa {characterName} era uma grande...`],
   foreground: decorations.princessWithBird,
+  next: [warriorPage, wizardPage],
 };
 
 export const namePage: Page = {

@@ -4,7 +4,7 @@ import React from 'react';
 import Item from '.';
 
 describe('<Item>', () => {
-  const item = { icon: 'princesa', label: 'Princesa', url: 'princesa' };
+  const item = { icon: 'princess.png', label: 'Princesa', url: 'princesa' };
   const props = {
     item,
     isSelected: false,
