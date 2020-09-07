@@ -1,10 +1,22 @@
 const path = require('path');
-
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const ImageminPlugin = require('imagemin-webpack');
+const TerserPlugin = require('terser-webpack-plugin');
+
 const HtmlWebpackPluginConfig = new HtmlWebpackPlugin({
   template: path.join(__dirname, 'src', 'index.html'),
   filename: 'index.html',
   inject: 'body',
+});
+
+const ImageminPluginConfig = new ImageminPlugin({
+  bail: false,
+  cache: true,
+  imageminOptions: {
+    plugins: [['optipng', { optimizationLevel: 5 }]],
+  },
+  test: /\.(png)$/i,
 });
 
 module.exports = (_, argv) => {
@@ -64,6 +76,16 @@ module.exports = (_, argv) => {
     devServer: {
       historyApiFallback: true,
     },
-    plugins: [HtmlWebpackPluginConfig],
+    plugins: isProduction
+      ? [
+          new CleanWebpackPlugin(),
+          HtmlWebpackPluginConfig,
+          ImageminPluginConfig,
+        ]
+      : [new CleanWebpackPlugin(), HtmlWebpackPluginConfig],
+    optimization: {
+      minimize: isProduction,
+      minimizer: [new TerserPlugin()],
+    },
   };
 };
