@@ -70,7 +70,7 @@ export const destinationPage: Page = {
     `Ele também pediu que {characterName} escolhesse com o coração.`,
     `Escolha o destino de {characterName}:`,
   ],
-  foreground: decorations.princess,
+  foreground: decorations.princessWithBook,
   next: [mountainPage, forestPage],
 };
 
@@ -81,7 +81,7 @@ export const bookPage: Page = {
     `- Ufa, finalmente – disse ela.`,
     `O livro repentinamente começou a falar e explicou que, após aberto, ela teria que completar uma tarefa.`,
   ],
-  foreground: decorations.princess,
+  foreground: decorations.princessWithBook,
   next: [destinationPage],
 };
 
