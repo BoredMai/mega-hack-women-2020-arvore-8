@@ -2,6 +2,34 @@ import { Page } from 'types';
 
 import decorations from 'styles/decorations.module.css';
 
+export const healthPage: Page = {
+  background: decorations.throneRoom,
+  choice: {
+    icon: 'potion_purple.png',
+    label: 'Saúde para todos',
+  },
+  content: [
+    `A fada então soprou glitter por toda princesa e bradou:`,
+    `- Querida {characterName}, seu reino foi abençoado conforme sua vontade e você será uma bondosa rainha um dia!`,
+    `Ela então, acordou e estava em seu castelo. Todos viveram felizes para sempre.`,
+  ],
+  foreground: decorations.princess,
+};
+
+export const happinessPage: Page = {
+  background: decorations.throneRoom,
+  choice: {
+    icon: 'potion_pink.png',
+    label: 'Felicidade para todos',
+  },
+  content: [
+    `A fada então soprou glitter por toda princesa e bradou:`,
+    `- Querida {characterName}, seu reino foi abençoado conforme sua vontade e você será uma bondosa rainha um dia!`,
+    `Ela então, acordou e estava em seu castelo. Todos viveram felizes para sempre.`,
+  ],
+  foreground: decorations.princess,
+};
+
 export const fairyPage: Page = {
   background: decorations.mountain,
   content: [
@@ -9,6 +37,7 @@ export const fairyPage: Page = {
     `- Nobre {characterName}, eu aguardava ansiosamente sua chegada! Vou ensinar uma poção mágica para você usar para o bem de seu reino:`,
   ],
   foreground: decorations.princessWithFairy,
+  next: [happinessPage, healthPage],
 };
 
 export const mountainPage: Page = {

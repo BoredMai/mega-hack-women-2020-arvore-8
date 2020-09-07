@@ -56,3 +56,10 @@
   position: absolute;
   width: 100vw;
 }
+
+:local(.throne-room) {
+  background: url('/src/assets/backgrounds/throne_room.png');
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
