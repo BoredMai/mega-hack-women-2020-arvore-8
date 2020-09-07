@@ -2,11 +2,11 @@ import ContentWrapper from 'components/content-wrapper';
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import backgrounds from 'styles/backgrounds.module.css';
+import decorations from 'styles/decorations.module.css';
 
 const LandingPage = (): JSX.Element => {
   return (
-    <div className={backgrounds.grass}>
+    <div className={decorations.grass}>
       <ContentWrapper>
         <h1>Colha uma História</h1>
         <p>

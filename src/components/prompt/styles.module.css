@@ -1,5 +1,6 @@
 :local(.prompt) {
   display: flex;
+  margin-top: 2rem;
   position: relative;
 }
 

@@ -8,7 +8,7 @@ import LoadingSpinner from 'components/loading-spinner';
 import { UserChoice } from 'types';
 
 import styles from './styles.module.css';
-import backgrounds from 'styles/backgrounds.module.css';
+import decorations from 'styles/decorations.module.css';
 
 const Library = (): JSX.Element => {
   const history = useHistory();
@@ -39,7 +39,7 @@ const Library = (): JSX.Element => {
     }, 2000);
 
     return (
-      <div className={backgrounds.grass}>
+      <div className={decorations.grass}>
         <LoadingSpinner />
       </div>
     );
@@ -50,7 +50,7 @@ const Library = (): JSX.Element => {
   };
 
   return (
-    <div className={backgrounds.grass}>
+    <div className={decorations.grass}>
       <ContentWrapper>
         <h1>Colha uma História</h1>
         <p>

@@ -1,6 +1,6 @@
 import { shallow, ShallowWrapper } from 'enzyme';
 
-import { rootPage } from 'pages';
+import { rootPage, namePage } from 'pages';
 import React from 'react';
 
 import Storyteller from '.';
@@ -12,24 +12,42 @@ describe('Storyteller', () => {
 
   let wrapper: ShallowWrapper;
 
-  beforeEach(() => {
-    jest.clearAllMocks();
-    useStateSpy
-      .mockImplementationOnce(() => [rootPage, setPageMock])
-      .mockImplementationOnce(() => [{}, setStoryPromptMock]);
-    wrapper = shallow(<Storyteller />) as ShallowWrapper;
+  describe('without branching', () => {
+    beforeEach(() => {
+      jest.clearAllMocks();
+      useStateSpy
+        .mockImplementationOnce(() => [rootPage, setPageMock])
+        .mockImplementationOnce(() => [{}, setStoryPromptMock]);
+      wrapper = shallow(<Storyteller />) as ShallowWrapper;
+    });
+
+    it('renders properly', () => {
+      expect(wrapper.getElement()).toMatchSnapshot();
+    });
   });
 
-  it('renders properly', () => {
-    expect(wrapper.getElement()).toMatchSnapshot();
-  });
+  describe('with prompt', () => {
+    beforeEach(() => {
+      jest.clearAllMocks();
+      useStateSpy
+        .mockImplementationOnce(() => [namePage, setPageMock])
+        .mockImplementationOnce(() => [{}, setStoryPromptMock]);
+      wrapper = shallow(<Storyteller />) as ShallowWrapper;
+    });
 
-  it('updates state correctly on promptUpdate', () => {
-    const promptKey = 'promptKey';
-    const promptValue = 'promptValue';
-    wrapper.find('Prompt').simulate('promptUpdate', promptKey, promptValue);
+    it('renders properly', () => {
+      expect(wrapper.getElement()).toMatchSnapshot();
+    });
 
-    expect(setStoryPromptMock).toHaveBeenCalledWith({ promptKey: promptValue });
-    expect(setPageMock).toHaveBeenCalledWith(rootPage.next[0]);
+    it('updates state correctly on promptUpdate', () => {
+      const promptKey = 'promptKey';
+      const promptValue = 'promptValue';
+      wrapper.find('Prompt').simulate('promptUpdate', promptKey, promptValue);
+
+      expect(setStoryPromptMock).toHaveBeenCalledWith({
+        promptKey: promptValue,
+      });
+      expect(setPageMock).toHaveBeenCalledWith(namePage.next[0]);
+    });
   });
 });

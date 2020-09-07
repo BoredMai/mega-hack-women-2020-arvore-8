@@ -1,0 +1,24 @@
+:local(.castle) {
+  background: url('/src/assets/castle.png');
+  background-color: #c3e4eb;
+  background-repeat: no-repeat;
+  background-position: bottom;
+}
+
+:local(.grass) {
+  background: url('/src/assets/grass.png');
+  background-repeat: repeat-x;
+  background-position: bottom;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+:local(.princess-with-bird) {
+  background: url('/src/assets/princess_bird.png');
+  background-repeat: no-repeat;
+  background-position: calc(50% - 40rem) 100%;
+  height: 100vh;
+  position: absolute;
+  width: 100vw;
+}

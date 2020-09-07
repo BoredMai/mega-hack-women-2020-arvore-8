@@ -1,6 +1,8 @@
 export interface Page {
-  content: string;
-  choiceText?: string;
+  content: string[];
+  background?: string;
+  choice?: UserChoice;
+  foreground?: string;
   next?: Page[];
   prompt?: UserPrompt;
 }

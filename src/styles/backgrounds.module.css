@@ -1,8 +1,0 @@
-:local(.grass) {
-  background: url('../assets/grass.png');
-  background-repeat: repeat-x;
-  background-position: bottom;
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-}
